@@ -2,10 +2,103 @@
     font-family: avenir;
     src: url(fonts/Avenir-Medium.ttf);
 }
-*{
-	margin :0px;
-	padding:0px;
-}
+
+    *{
+        margin :0px;
+        padding:0px;
+        box-sizing: border-box;
+     }
+     
+     /* Reset page font size, 1rem = 16px */
+     html body{
+         font-size: 16px;
+         /* font-family:'AvenirLTStd-Roman',"Helvetica Neue",sans-serif; */
+         /* background-color: var(--grey-100); */
+     }
+     html {
+        position:relative;
+        min-height: 100%;
+    }
+
+     .CF-support{
+        background-image: url(../img/demo-app-bg-waveline.png);
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        background-size: contain;
+        min-height: calc(100vh - 104px);
+        background-position: bottom;
+        display: flex;
+        flex-direction: column;
+        /* min-height: 100vh; */
+     }
+     .container-flex{
+        flex: 1 1 0;
+     }
+     
+     /* Layout */
+     
+     section {
+         max-width: 1000px;
+         margin: 2rem auto 0;
+         display: flex;
+         display: -ms-flexbox;
+         padding: 0rem 1rem;
+     }
+     
+     
+     /* Custom styles */
+     
+     footer{
+         width: 100%;
+         background-color: white;
+         color: #424143;        
+         position: relative;
+    bottom: 0;
+    flex: none;
+    margin-top: -2rem;
+     }
+     
+     footer a{
+         color: #7A7A7B;
+     }
+     
+     .footer-section{
+         justify-content: space-between;
+         -ms-flex-pack: justify;
+         padding: 2rem 1rem;
+     }
+     
+     .footer-logo{
+         display: flex;
+         display: -ms-flexbox;
+         align-items: center;
+         margin-left: 1rem;
+     }
+     
+     
+     /* Mobile Responsive */
+     
+     
+     @media screen and (max-width : 768px) {
+     
+     
+     body{
+         background-size: 200%;
+         background-position-x: right;
+         }
+     
+         footer section{
+           display: block;
+         }
+     
+         .footer-logo{
+           padding-top: 2rem;
+           justify-content: center;
+           -ms-flex-pack: justify;
+         }
+         
+         }
+         /* ---------------Footer END-------------------- */
 div,button,input,input:focus{
 	outline : none;
 }
