@@ -42,7 +42,7 @@
 		var url = "";
 		// Calling TTS ENG
 		if (language == 1) {
-			url = "https://api.sentient.io/tts/prod/ttseng";
+			url = "https://apis.sentient.io/microservices/voice/ttseng/v0.1/getpredictions";
 			if (text.length >= 2001) {
 				$("#confirmation-modal").modal();
 				document.getElementById("errorTxt").innerHTML = "Speech Content allow upto 2000 Characters. Please Try Again";
@@ -55,7 +55,7 @@
 		}
 		// Calling TTS SCH
 		if (language == 0) {
-			url = "https://api.sentient.io/tts/prod/ttssch";
+			url = "https://apis.sentient.io/microservices/voice/ttssch/v0.1/getpredictions";
 			if (text.length >= 751) {
 				$("#confirmation-modal").modal();
 				document.getElementById("errorTxt").innerHTML = "Speech Content allow upto 750 Characters. Please Try Again...";
