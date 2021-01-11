@@ -23,9 +23,9 @@
      .CF-support{
         background-image: url(../img/demo-app-bg-waveline.png);
         background-repeat: no-repeat;
-        margin: 0 auto;
+        margin: 0!important;
         background-size: contain;
-        min-height: calc(100vh - 104px);
+        /* min-height: calc(100vh - 104px); */
         background-position: bottom;
         display: flex;
         flex-direction: column;
@@ -39,7 +39,7 @@
      
      section {
          max-width: 1000px;
-         margin: 2rem auto 0;
+         margin: 0 auto 0;
          display: flex;
          display: -ms-flexbox;
          padding: 0rem 1rem;
@@ -63,14 +63,15 @@
      }
      
      .footer-section{
-         justify-content: space-between;
-         -ms-flex-pack: justify;
-         padding: 2rem 1rem;
-     }
+        justify-content: space-between;
+        -ms-flex-pack: justify;
+        padding: 2rem 1rem;
+        padding-top: 3rem;
+    }    
      
      .footer-logo{
-         display: flex;
-         display: -ms-flexbox;
+         /* display: flex;
+         display: -ms-flexbox; */
          align-items: center;
          margin-left: 1rem;
      }
@@ -92,7 +93,7 @@
          }
      
          .footer-logo{
-           padding-top: 2rem;
+           /* padding-top: 2rem; */
            justify-content: center;
            -ms-flex-pack: justify;
          }
@@ -368,6 +369,25 @@ border-bottom: none;
 .border-topNone{
     border-top: none;
 }
+@media screen and (max-width: 991px) {
+    .footer-section{
+        flex-direction: column;
+        flex-flow: column;
+        text-align: center;
+        display: flex;      
+    }
+    .footer-logo {
+        display: flex;
+        display: -ms-flexbox;
+        align-items: center;       
+        text-align: center;
+        display: block;
+        /* margin: 2rem auto; */
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+
+  }
 @media screen and (max-width: 769px) {
     .intro-btns{ text-align: center;}
     .intro-btns div {
@@ -394,4 +414,12 @@ max-width:1170px
 .footer-section{
     max-width: 750px;
   }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.flex-fill{
+    flex: 1 1 auto;
 }
